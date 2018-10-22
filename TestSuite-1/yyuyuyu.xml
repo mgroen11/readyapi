@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="1452a003-eb80-471b-b773-092087c6e066" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="yyuyuyu" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="1452a003-eb80-471b-b773-092087c6e066" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="yyuyuyu" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="1452a003-eb80-471b-b773-092087c6e066fileName">yyuyuyu</con:setting>
   </con:settings>
