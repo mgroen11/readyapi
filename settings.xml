@@ -8,6 +8,7 @@
     <con:repositoryIdentifier>https://github.com/mgroen11/readyapi</con:repositoryIdentifier>
   </con:vcsConfiguration>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
   <con:properties/>
   <con:wssContainer/>
   <con:databaseConnectionContainer/>

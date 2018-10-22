@@ -4,6 +4,20 @@
     <con:setting id="941a5d75-329c-44a2-8121-8812e7150bdcfileName">tc1</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="httprequest" name="HTTP Request bla" id="79af74d4-77bb-4c89-adfa-d3450d96d4bf">
+    <con:settings/>
+    <con:config method="GET" xsi:type="con:HttpRequest" id="3599070e-d571-4795-b711-e596515e05d6" name="HTTP Request bla" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings/>
+      <con:endpoint/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
 </con:testCase>
