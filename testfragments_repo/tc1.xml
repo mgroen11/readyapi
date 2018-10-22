@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="941a5d75-329c-44a2-8121-8812e7150bdc" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="tc1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="941a5d75-329c-44a2-8121-8812e7150bdcfileName">tc1</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
