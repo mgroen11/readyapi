@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="ded4db3d-e646-46f9-bb7d-9efde8afdf25" name="1. TestSuite for ClausuleWebAPI" xmlns:con="http://eviware.com/soapui/config"><con:description>URL:
+http://atlas4.ontwikkel.com/ClausuleWebApi/api/v1/clausules/{clausuleid}
+</con:description><con:settings><con:setting id="IncludeOverview">true</con:setting><con:setting id="IncludeResults">true</con:setting><con:setting id="FlowLayout">false</con:setting><con:setting id="ErrorDetails">true</con:setting><con:setting id="IncludeCoverage">true</con:setting><con:setting id="ded4db3d-e646-46f9-bb7d-9efde8afdf25fileName">1.-TestSuite-for-ClausuleWebAPI</con:setting></con:settings><con:savedRecentRuns>3</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:properties/><con:reportParameters/></con:testSuite>

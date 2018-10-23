@@ -1,0 +1,17 @@
+REST-Service-1\%2FClausuleWebApi%2Fapi%2Fv1%2Fclausules%2F.xml
+SecurityTest-1.xml
+SecurityTest-2.xml
+SecurityTest-3.xml
+SecurityTest-4.xml
+1.-TestSuite-for-ClausuleWebAPI\1.1.-valide-waarde-%28bestaand-clausuleID%29.xml
+1.-TestSuite-for-ClausuleWebAPI\1.2.-valide-waarde-%28niet-bestaand-clausuleID%29.xml
+1.-TestSuite-for-ClausuleWebAPI\1.3.-Invalide-waarde-%28non-numeric%29.xml
+1.-TestSuite-for-ClausuleWebAPI\1.4.-geen-ClausuleID.xml
+2.-TestSuite-for-Get-Polis-By-Klantnummer\2.1-Klantnummer-met-Polis.xml
+2.-TestSuite-for-Get-Polis-By-Klantnummer\2.2-Klantnummer-zonder-Polis.xml
+2.-TestSuite-for-Get-Polis-By-Klantnummer\2.3-Klantnummer-met-random-string.xml
+2.-TestSuite-for-Get-Polis-By-Klantnummer\2.4-Zonder-klantnummer.xml
+1.1.-valide-waarde-%28bestaand-clausuleID%29-LoadTest.xml
+1.2.-valide-waarde-%28niet-bestaand-clausuleID%29-LoadTest.xml
+1.3.-Invalide-waarde-%28non-numeric%29-LoadTest.xml
+1.4.-geen-ClausuleID-LoadTest.xml

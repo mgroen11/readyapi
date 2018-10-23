@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c6c65292-2370-4766-80d2-3c6a71043a29" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="1.2. valide waarde (niet bestaand clausuleID)" searchProperties="true" timeout="0" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>2. Scenario: executing a call to the ClausuleWebAPI with a non existing Clausulenr as parameter
+
+Given the ClausuleWebAPI is online
+And the database containing the clausulenr is online
+When a http call to the ClausuleWebAPI is executed with a non-existing Clausulenr as parameter
+Then the response code is 404 (Not found)
+And the response body contains .... [TBD]
+(And the duration of the response does not exceed xxxx ms)
+
+URL:
+http://atlas4.ontwikkel.com/ClausuleWebApi/api/v1/clausules/{clausuleid}</con:description>
+  <con:settings>
+    <con:setting id="c6c65292-2370-4766-80d2-3c6a71043a29fileName">1.2.-valide-waarde-%28niet-bestaand-clausuleID%29</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="jdbc" name="1.2.1 Ophalen Max+1 uit DB (JDBC)" id="380fc5d8-6efa-4464-8904-86b89cc3ceb4">
+    <con:settings>
+      <con:setting id="prettyPrintResponse">true</con:setting>
+    </con:settings>
+    <con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" queryTimeout="100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dbConnectionName>connection_config</con:dbConnectionName>
+      <con:driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</con:driver>
+      <con:connectionString>jdbc:sqlserver://smhosql04.ontwikkel.com:1433;databaseName=VIA;user=WebSqlUser;password=PASS_VALUE</con:connectionString>
+      <con:password>OftWSuG4</con:password>
+      <con:connectionProperties/>
+      <con:query>SELECT MAX(nr)+1
+  FROM [Setprinting].[dbo].[Modellen]
+  WHERE type = :type
+  AND clausuleactief = 1</con:query>
+      <con:storedProcedure>false</con:storedProcedure>
+      <con:assertion type="JDBC Status" id="3c93e970-0fab-49e6-b51a-702847c3bc95" name="JDBC Status"/>
+      <con:assertion type="JDBC Timeout" id="0b6f7673-58ac-43e4-8f25-f192870803e3" name="JDBC Timeout">
+        <con:configuration>
+          <JDBCtimeout>100</JDBCtimeout>
+        </con:configuration>
+      </con:assertion>
+      <con:properties>
+        <con:property>
+          <con:name>type</con:name>
+          <con:value>5000</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="httprequest" name="1.2.2 Ophalen niet bestaand ClausuleID" id="90649258-1480-4449-8c6e-eef7bc38b6d5">
+    <con:settings/>
+    <con:config method="GET" xsi:type="con:HttpRequest" id="157cccfd-a8a0-491b-bae7-fa73c314db4e" name="1.2.2 Ophalen niet bestaand ClausuleID" postQueryString="true" mediaType="application/x-www-form-urlencoded" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://atlas4.ontwikkel.com/ClausuleWebApi/api/v1/clausules/{clausuleid}</con:endpoint>
+      <con:request/>
+      <con:assertion type="Valid HTTP Status Codes" id="eb370bab-fbc5-411e-ac51-7ae15f75c5fa" name="Valid HTTP Status Codes">
+        <con:settings/>
+        <con:configuration>
+          <codes>404</codes>
+        </con:configuration>
+      </con:assertion>
+      <con:assertion type="Response SLA Assertion" id="27971df0-d41d-4987-ad70-78f2bce5c0f3" name="Response SLA">
+        <con:configuration>
+          <SLA>200</SLA>
+        </con:configuration>
+      </con:assertion>
+      <con:assertion type="Simple Contains" id="2ab43d58-76d6-4b40-8174-47d39c82f79d" name="Contains" disabled="true">
+        <con:configuration>
+          <token/>
+          <ignoreCase>false</ignoreCase>
+          <useRegEx>false</useRegEx>
+        </con:configuration>
+      </con:assertion>
+      <con:assertion type="Sensitive Information Exposure" id="017e6c50-0f8c-435b-94f5-f1390ae0599d" name="Sensitive Information Exposure" disabled="true">
+        <con:configuration>
+          <AssertionSpecificExposureList>~(?s).*Runtime (E|e)rror.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*SQLSTATE: [A-Z0-9].*###[Database error messages] Internal database information can be misused by hackers</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*(s|S)tack:.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*(s|S)yntax (e|E)rror\s.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*\w+/\d{1,2}(\.\d{1,3})+.*###[Version x.y.z] Exposing version numbers gives
+            unnecessary hints on your systems vulnerabilities</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*Invalid column name\s.*###[Database error messages] Internal database information can be misused by hackers</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*
+            (ORA|EXP|IMP|KUP|UDE|UDI|DBV|LCD|QSM|OCI|RMAN|LFI|PLS|PLQ|AMD|CLSR|PROC|PROT|TNS|NNC|NLP|NNF|NMP|NCR|NZE|O2F|O2I|O2U|PCB|PCC|SQL|AUD|IMG|VID|DRG|LPX|LSX)-\d{5}\s
+        .*###[Database error messages] Internal database information can be misused by hackers</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*(p|P)owered by:? ([a-zA-Z]+)( [a-zA-Z]+){0,3}( |/)\d\.\d{1,2}\.\d{1,3}.*###[Version x.y.z] Exposing version numbers gives
+            unnecessary hints on your systems vulnerabilities</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*at [\w\$]+(\.[\w\$&lt;>\[\],]+|\.\.ctor)+(\((([\w\$&lt;>\`\[\]]+ [\w\$&lt;>]+, )*(([\w\$&lt;>\`\[\]]+
+            [\w\$&lt;>]+)))\)|\(\))
+        .*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*&lt;\w+:frame\s*class=".*"\s*line=".*"\s*method=".*"\s*/>.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*Traceback \(most recent call last\):.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*((I|i)ncorrect|(I|i)nvalid) (s|S)yntax.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*(s|S)tack ?(t|T)race.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*(e|E)rror was:\s.*###[Database error messages] Internal database information can be misused by hackers</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*(v|V)ersion:? \d\.\d{1,2}\.{1,3}-?.*###[Version x.y.z] Exposing version numbers gives
+            unnecessary hints on your systems vulnerabilities</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*from [\w\$]+(\.[\w\$&lt;>]+)+:\d+:in `.+'.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*Error in process &lt;\d+\.\d+\.\d+> with exit value:.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*STACK\s?TRACE.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*Warning: [\w]+\(\) .+ in .+ on line \d{1,6}.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*((A|a)pache|vBulletin|MySQL|PostgreSQL|phpBB|Internet Information Services)( |/)\d{1,2}(\.\d{1,3})+
+        .*###[Version x.y.z] Exposing version numbers gives
+            unnecessary hints on your systems vulnerabilities</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*at [a-zA-Z][\w\$]*(\.[a-zA-Z][\w\$]*)+\((Unknown Source|Native
+            Method|[a-zA-Z][\w\$]*\.([a-zA-Z]{3,5}):\d+)\)
+        .*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*[^\s]+\.rb:\d+:in `.+'.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <AssertionSpecificExposureList>~(?s).*File ".+", line [0-9]{1,6}, in.*###[Stacktrace] Can give hackers information about which software or language you are using</AssertionSpecificExposureList>
+          <IncludeProjectSpecific>true</IncludeProjectSpecific>
+          <IncludeGlobal>false</IncludeGlobal>
+        </con:configuration>
+      </con:assertion>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>clausuleid</con:name>
+          <con:value>${1.2.1 Ophalen Max+1 uit DB (JDBC)#ResponseAsXml#//Results[1]/ResultSet[1]/Row[1]/_[1]}</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>${2.1 JDBC Request#ResponseAsXml#//Results[1]/ResultSet[1]/Row[1]/_[1]}</con:default>
+        </con:parameter>
+      </con:parameters>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>26fa287f-f249-410c-86d5-a850c3d65b9a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

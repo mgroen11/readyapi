@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="5a8dd299-7724-4638-8d8e-cc0e6d5a6843" name="2. TestSuite for Get Polis By Klantnummer" xmlns:con="http://eviware.com/soapui/config"><con:description>URL:
+http://atlas4.ontwikkel.com/ViaWebApi/api/v1/klanten/{klantnr}/polis
+
+Swagger:
+http://atlas4.ontwikkel.com/ViaWebApi/swagger/ui/index#!/Klant/KlantV1_GetPolisByKlantnummer
+
+</con:description><con:settings><con:setting id="FlowLayout">false</con:setting><con:setting id="5a8dd299-7724-4638-8d8e-cc0e6d5a6843fileName">2.-TestSuite-for-Get-Polis-By-Klantnummer</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:properties/><con:reportParameters/></con:testSuite>

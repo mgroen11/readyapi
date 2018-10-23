@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="e5274545-7113-47cd-ba70-258708d20de6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="2.4 Zonder klantnummer" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:description>2.4. Scenario: executing a call to the GetPolisByKlantnummer API with an empty klantnr as a parameter
+
+Given the GetPolisByKlantnummer API is online
+And the database containing the Klantnummers is online
+When a http call to GetPolisByKlantnummer is called with an empty klantnr as a parameter
+Then the response code is 404 (Not Found)
+And the response body contains the text: "Server Error"
+(And the duration of the response does not exceed xxxx ms)
+
+URL:
+http://atlas4.ontwikkel.com/ViaWebApi/api/v1/klanten/{klantnr}/polis
+
+Swagger:
+http://atlas4.ontwikkel.com/ViaWebApi/swagger/ui/index#!/Klant/KlantV1_GetPolisByKlantnummer
+</con:description><con:settings><con:setting id="e5274545-7113-47cd-ba70-258708d20de6fileName">2.4-Zonder-klantnummer</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="httprequest" name="GET request zonder klantnr" id="af013007-db59-4c56-8410-2a4e0f8117b3"><con:settings/><con:config method="GET" xsi:type="con:HttpRequest" id="157cccfd-a8a0-491b-bae7-fa73c314db4e" name="GET request zonder klantnr" postQueryString="true" mediaType="application/x-www-form-urlencoded" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://atlas4.ontwikkel.com/ViaWebApi/api/v1/klanten/{klantnr}/polis</con:endpoint><con:request/><con:assertion type="Valid HTTP Status Codes" id="3383ddba-6a63-494c-ab2e-0e300f93d5b3" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>404</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="e88b9989-d2f0-4570-8b56-cf8532c790c3" name="Contains"><con:configuration><token>File or directory not found</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" name="Response SLA" id="45fa2068-69d0-4721-8dd6-f15994b0a02d"><con:configuration><SLA>300</SLA></con:configuration></con:assertion><con:assertion type="Sensitive Information Exposure" id="73007b10-4488-4813-bc5d-f08314809731" name="Sensitive Information Exposure"><con:configuration/></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><con:parameter><con:name>klantnr</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
