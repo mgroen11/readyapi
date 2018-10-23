@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="414ff5c9-30fc-4860-ada0-53b1ed1ae856" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Testfragment 2" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="414ff5c9-30fc-4860-ada0-53b1ed1ae856fileName">Testfragment-2</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:properties/><con:reportParameters/></con:testCase>

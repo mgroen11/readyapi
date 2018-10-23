@@ -4,32 +4,13 @@
     <con:setting id="6245927e-85a6-432c-9600-51d5c3aed3fafileName">Testfragment-1</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="httprequest" name="teststep 1.1" id="9eb5d2b0-65f2-4c2b-98e8-3c159f312d10">
+  <con:testStep type="calltestcase" name="Run TestCase 2" id="52907818-bdac-4b4d-971d-906a3d7450e8">
     <con:settings/>
-    <con:config method="GET" xsi:type="con:HttpRequest" id="451bce74-40aa-4c54-92de-177bede95f60" name="teststep 1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:settings/>
-      <con:endpoint/>
-      <con:request/>
-      <con:credentials>
-        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-        <con:authType>No Authorization</con:authType>
-      </con:credentials>
-      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="httprequest" name="test2" id="2804ac71-cd80-43a7-b69f-3c286be7e8dd">
-    <con:settings/>
-    <con:config method="GET" xsi:type="con:HttpRequest" id="0128781b-6400-4174-8233-6c6cc3fa4f58" name="test2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:settings/>
-      <con:endpoint/>
-      <con:request/>
-      <con:credentials>
-        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-        <con:authType>No Authorization</con:authType>
-      </con:credentials>
-      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>6efa1807-e33e-497c-b658-deac4952a7f5</con:targetTestCase>
+      <con:properties/>
+      <con:returnProperties/>
+      <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
   <con:properties/>
