@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="7159e071-e8ef-4626-bc69-37ae14888726" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="tc_mgn2" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7159e071-e8ef-4626-bc69-37ae14888726fileName">tc_mgn2</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="httprequest" name="http4" id="c085852b-cc53-47f7-821f-86ac43fef52d">
+    <con:settings/>
+    <con:config method="GET" xsi:type="con:HttpRequest" id="b205e4a4-6929-4f13-99a4-ba5e69963ba5" name="http4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://www.telegraaf.nl</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -20,13 +20,43 @@
       <con:parameters/>
     </con:config>
   </con:testStep>
-  <con:testStep type="httprequest" name="http2" id="4b71998c-1206-4cf7-b141-598d3656fee0">
+  <con:testStep type="httprequest" name="http2" id="4b71998c-1206-4cf7-b141-598d3656fee0" disabled="true">
     <con:settings/>
     <con:config method="GET" xsi:type="con:HttpRequest" id="46eb3d21-ef8c-415e-862d-d2a69106d48e" name="http2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
-      <con:endpoint>www.google.nl</con:endpoint>
+      <con:endpoint>http://www.google.nl</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="httprequest" name="http3" id="305d8130-02ba-41b6-97fb-3ac70eea52b4">
+    <con:settings/>
+    <con:config method="GET" xsi:type="con:HttpRequest" id="8b40cd98-aacf-4409-877e-b1cc8d9ca08b" name="http3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://www.ad.nl</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="httprequest" name="http5" id="57961e04-2aa6-43d5-99b6-299ad6cbfd74">
+    <con:settings/>
+    <con:config method="GET" xsi:type="con:HttpRequest" id="86a52c64-197a-4916-913c-cf685c3a45f0" name="http5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings/>
+      <con:endpoint>http://www.ad.nl</con:endpoint>
       <con:request/>
       <con:credentials>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>

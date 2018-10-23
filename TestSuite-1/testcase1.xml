@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="6245927e-85a6-432c-9600-51d5c3aed3fa" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Testfragment 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="6245927e-85a6-432c-9600-51d5c3aed3fa" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="testcase1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6245927e-85a6-432c-9600-51d5c3aed3fafileName">Testfragment-1</con:setting>
+    <con:setting id="6245927e-85a6-432c-9600-51d5c3aed3fafileName">testcase1</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="Run TestCase 2" id="52907818-bdac-4b4d-971d-906a3d7450e8">
+  <con:testStep type="calltestcase" name="Run TestCase" id="45644d9d-d9e4-449b-8145-d945bcb712a2">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>6efa1807-e33e-497c-b658-deac4952a7f5</con:targetTestCase>
