@@ -20,6 +20,22 @@
       <con:parameters/>
     </con:config>
   </con:testStep>
+  <con:testStep type="httprequest" name="http2" id="4b71998c-1206-4cf7-b141-598d3656fee0">
+    <con:settings/>
+    <con:config method="GET" xsi:type="con:HttpRequest" id="46eb3d21-ef8c-415e-862d-d2a69106d48e" name="http2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>www.google.nl</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
 </con:testCase>
