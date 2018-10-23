@@ -4,9 +4,9 @@
     <con:setting id="6efa1807-e33e-497c-b658-deac4952a7f5fileName">tc1_mgn</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="httprequest" name="HTTP Request" id="6434f4d1-4cba-40e5-b67e-41ca0bf5f65b">
+  <con:testStep type="httprequest" name="http1" id="6434f4d1-4cba-40e5-b67e-41ca0bf5f65b">
     <con:settings/>
-    <con:config method="GET" xsi:type="con:HttpRequest" id="53c669b3-b989-43c3-b589-bd8aceaa4001" name="HTTP Request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config method="GET" xsi:type="con:HttpRequest" id="53c669b3-b989-43c3-b589-bd8aceaa4001" name="http1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
