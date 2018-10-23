@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="6efa1807-e33e-497c-b658-deac4952a7f5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="tc1_mgn" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="6efa1807-e33e-497c-b658-deac4952a7f5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="tc1_mgn_bla" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6efa1807-e33e-497c-b658-deac4952a7f5fileName">tc1_mgn</con:setting>
+    <con:setting id="6efa1807-e33e-497c-b658-deac4952a7f5fileName">tc1_mgn_bla</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="httprequest" name="http1" id="6434f4d1-4cba-40e5-b67e-41ca0bf5f65b">
